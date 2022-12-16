@@ -1,0 +1,109 @@
+.project-content{
+    margin-top: 5em;
+    margin-bottom: 10em;
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
+.project-title{
+    font-size: 5em;
+    color: #08629a;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.video-container{
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    border-radius: 0.5em;
+}
+video{
+    width: 70em;
+}
+
+h3{
+    font-size: 3em;
+    margin-top: 2em;
+}
+
+p{
+    font-size: 1.7em;
+}
+
+ul{
+    font-size: 1.7em;
+}
+
+ol{
+    font-size: 1.7em;
+}
+
+.bolded{
+    font-weight: bold;
+}
+
+button{
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 1.7em;
+    color:#08629a;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+button:hover{
+    background-color: antiquewhite;
+    border-radius: 0.5em;
+    box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.2)
+}
+
+.button-container{
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.image-container{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+img{
+    width: 50em;
+    height: auto;
+    border-radius: 0.5em;
+}
+
+.vr-img{
+    width: 80em;
+    height: auto;
+}
+
+.ar-img{
+    width: 75em;
+    height: auto;
+}
+.forest-vid{
+    width:30em;
+    height: auto;
+    border-radius: 1em;
+}
+
+.artrec-img{
+    width:70em;
+    height:auto;
+}
+
+.jacopino-video{
+    width: 70em;
+    height:40em;
+}
+
+.persona-subtitle{
+    margin-top: 1em;
+}

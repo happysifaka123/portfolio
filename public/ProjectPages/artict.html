@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href = "./css/project-page.css">
+    </head>
+    <body>
+        <div class = "project-content">
+            <div class = "project-title">
+                <h1 class = "display-3">Pigment Separation Using X-Ray Elemental Maps of a Painting</h1>
+            </div>
+
+            <div class = "button-container">
+                <a href = "../index.html"><button>Back to Home</button></a>
+            </div>  
+            
+                  
+            <h3>Context and Problem</h3>
+            <p>
+                As a painting ages, parts of its pigment layers fall off or lose their original colors, 
+                due to chemical interactions with the surrounding environment. 
+                To repair a damaged painting, 
+                art conservators and restorers fill in its areas of paint loss or repaint discolored areas. 
+                Identifying the pigments used when creating a painting as well as differentiating 
+                between retouched and original areas of a painting are crucial in preserving it, 
+                reviving it, and understanding its history. 
+            </p>
+            <h3>Macro XRF in the Context of Art Investigation</h3>
+            <div class = "image-container">
+                <img src="../images/element-maps.png"/>
+            </div>  
+            <p>
+                In recent decades, non-invasive material detection techniques 
+                (e.g. X-ray fluorescence, abbreviated as XRF) have gained attention throughout the cultural 
+                heritage scientific community. 
+                In the context of art conservation, these techniques allow the detection of 
+                elements present in paintings under study as in the figure above 
+                (Top: RGB image of a test painting prepared at the National Gallery, London. 
+                Bottom: MA-XRF element distribution maps, 
+                which identify areas where different chemical elements are present 
+                in the scanned region of the painting. 
+                In this case, the lighter areas in the panels indicate the presence of barium (bottom left) 
+                and of cobalt (bottom right)).
+                <br><br> 
+                More precisely, algorithms designed for material detection process the XRF “data cube” 
+                and provide elemental maps as in the image above indicating the presence of 
+                various elements across a painting. 
+                However, even with the help of elemental maps, it is still 
+                a challenging task to identify pigments (compounds or 
+                mixtures of compounds that consist of several elements)
+                and distinguish retouched areas, based on the scrutiny of elemental maps one by one.
+                <br><br>
+            </p>
+            <h3>Mathematical Optimization Model for Pigment Map Generation</h3>
+            <p>
+                In collaboration with Prof. Barak Sober (former mathematics professor at Duke University), 
+                Prof. Ingrid Daubechies (mathematics professor at Duke University),
+                and researchers at the National Gallery, London,
+                I developed an algorithm that takes as its inputs elemental maps of a painting
+                and the painting's RGB image to generate 
+                images showing areas where certain pigments were used. 
+                The algorithm uses our basic assumption visualized below; 
+                a painting is composed of pigments, and a pigment is composed of chemical elements.</p>
+                <div class = "image-container">
+                    <img src = "../images/artict-basic-assumption.png">
+                </div>
+                  
+                <p>The algorithm, whose structure is visualized below, takes three inputs: </p> 
+                <ul>
+                    <li><b>RGB image of the input painting</b></li>
+                    <li><b>Element maps of the input painting</b>. Each of these maps shows where a specific chemical element is present in the painting.</li>
+                    <li><b>Element proportions matrix</b>, whose row represents a pigment and column represents a chemical element. 
+                        The number at the intersection of row A and column B would be the proportion of the element B in pigment A. 
+                        Because it is often difficult to trace information about chemical compositions of historical pigments, 
+                        some entries in this matrix are unknown.</li>
+                </ul>
+                <div class = "image-container">
+                    <img src = "../images/algorithm.png">
+                </div>
+                <p>Using those three inputs, the algorithm uses an iterative process to achieve the following goals:</p>
+                <ul>
+                    <li>Generate pigment maps, each of which shows areas in a painting where a specific pigment is present.</li>
+                    <li>Fill in unknown entries in the element proportions matrix.</li>
+                </ul>
+                <br><br>
+                <p>Each step in the iterative process can be broken down into the following:</p>
+                <ol>
+                    <li>Use the <b>least squares method</b> to generate intermediate pigment maps. 
+                        As the inputs of the method, use the input element maps and the element proportions matrix, 
+                        which is initially given as the input but is modified throughout the iterative process 
+                        as its unknown entries are filled out</li>
+                    <li>Use the <b>optimization process</b> to figure out unknown entries in the element proportions matrix. 
+                        As a result of this optimization, a new element proportions matrix is generated.</li>
+                    <li>With the original input element maps and RGB image and the new element proportions matrix generated in step 2, repeat steps 1-2 until the sum of all error terms converges.</li>
+                </ol>
+                <br><br>
+                <p>The output pigment maps can be used by art investigators to both 
+                “read” the pigments that the artist used to create the painting 
+                and identify retouches or fills in an automatic fashion.</p> 
+                 
+                 <br><br>
+            </p>
+            <h3>Conclusion</h3>
+            <p>
+                This project gave me meaningful opportunities to work with professionals in art conservation, mathematics, 
+                and computer science. While solving problems in art conservation with them, I was inspired to 
+                discover more ways to use mathematics and computational imaging technologies to address interdisciplinary challenges. 
+                <br><br> 
+                I presented this project in a poster at the International Conference on Computational Photography (ICCP) in August 2022. 
+                The poster was selected for a spotlight talk, which you can watch <a href = "./anonymized.html">here</a>.
+            </p>
+            <!-- https://www.youtube.com/watch?v=Nyuf_ebHQUU -->
+            <div class = "button-container">
+                <a href = "../index.html"><button>Back to Home</button></a>
+            </div>  
+        </div>
+    </body>
+</html>

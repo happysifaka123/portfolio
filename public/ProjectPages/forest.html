@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href = "./css/project-page.css">
+    </head>
+    <body>
+        <div class = "project-content">
+            <div class = "project-title">
+                <h1 class = "display-3">Visualization of Author Collaboration and Publication Relationships – Insight Engine 2.0</h1>
+            </div>
+            
+            <div class = "button-container">
+                <a href = "../index.html"><button>Back to Home</button></a>
+            </div>
+
+            <h3>Context and Problem</h3>
+            <p>
+                In existing academic search platforms, users can look for papers about a certain topic, 
+                specific authors, and their publications. 
+                However, because search results in most platforms appear in a vertical list, 
+                users cannot gain deeper insight into the searched keyword such as influential authors 
+                with frequent collaborations in its relevant academic field.
+                <br><br>
+            </p>
+            <h3>Forest Model for Intuitive Academic Data Visualization</h3>
+            <p>
+                As a member of Duke University’s Insight Engine team led by Prof. Bill Seaman, 
+                I wanted to build an advanced search tool that visualizes relationships among authors, 
+                publications, and research topics in ways that are easy for users to understand. 
+                After thinking about multiple ways to do so, I decided to adapt the form of a forest, 
+                which is familiar to most people.
+            </p>
+            <h3>Interface Design of the Forest Model</h3>
+            
+            <div style="padding:55% 0 0 0;position:relative;" class = "video-container">
+                <iframe class = "forest-vid" src="https://player.vimeo.com/video/781636699?h=3b572a06a4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Tree_demo.mov"></iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+
+            <p>
+                The interface of the model receives from its users the name of an author whose 
+                publication and collaboration relationships they want to visualize.
+                <br><br> 
+                Then the interface shows the searched author as a tree in the center of the forest. 
+                Other authors who have published at least one paper with the author are visualized 
+                as other trees at varying distances from the central tree, 
+                depending on the number of the corresponding authors’ collaborations with the central author. 
+                <br><br> 
+                Each tree also has different numbers of leaf clusters attached to it, 
+                depending on the number of publications the corresponding author published in the ACM journal. 
+                <br><br> 
+                By entering the search tool’s explore mode, users can virtually walk around 
+                the generated forest and click different trees and their leaf clusters to see authors 
+                and publications they represent.
+            </p>
+            <h3>Conclusion</h3>
+            <p>
+                Presenting the model at an international-level conference in information science, 
+                the Theoretical and Foundational Problems in Information Studies conference, 
+                I introduced participants to a new use of the Unity game engine as 
+                a search tool and inspired them to use my forest model to represent different types of data. 
+                You can view my presentation <a href = "./anonymized.html">here</a> and my extended abstract 
+                <a href = "./anonymized.html">here</a>. 
+                I also started leading a group with two Ph.D. students to explore additional metaphors 
+                and add more interactive elements to the forest. 
+                We are seeking to model elements such as winds that represent research trends/directions. 
+                Using a game engine as our visualization platform is enabling us 
+                to explore innovative data visualization strategies, including multi-perspective views, 
+                physics engines, and 3D landscape qualities.
+                <br><br>
+                This project was particularly meaningful to me in that 
+                it enabled me to discover new uses of game engines. I also learned the imporance of sharing 
+                my product ideas with other people to discover the product's new potentials.
+            </p>
+            <!-- Vimeo https://vimeo.com/608448162 -->
+            <!-- Abstract: https://tfpiscom.files.wordpress.com/2021/07/kwon.pdf -->
+            <div class = "button-container">
+                <a href = "../index.html"><button>Back to Home</button></a>
+            </div>
+        </div>
+    </body>
+</html>

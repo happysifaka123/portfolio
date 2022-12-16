@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href = "./css/project-page.css">
+    </head>
+    <body>
+        <div class = "project-content">
+            <div class = "project-title">
+                <h1 class = "display-3">React Development<h1>
+            </div>
+
+            <div class = "button-container">
+                <a href = "../index.html"><button>Back to Home</button></a>
+            </div>
+
+            <h3>Context and Problem</h3>
+            <p>I completed this project as my assignment for the User Interface/User Experience class at Brown 
+                in Fall 2022.<br><br>
+                The goal of this application is to help the user place online orders from My Bakery. 
+                To do so, the application allows the user to browse items sold at My Bakery, 
+                filter and sort the items as desired, and add the items to the cart. 
+                This application is valuable to the user, 
+                because it allows the user to check out items sold at My Bakery 
+                at anywhere in the world with internet access.</p>
+            
+
+            <h3>Usability Principles Considered</h3>
+            <div class = "image-container">
+                <img style = "width: 70em;" src = "../images/bakery_website.png">
+            </div>
+            <p>Please refer to the screenshot above for the descriptions below</p>
+            <p class = "bolded">Sort and Filter</p>
+            <ul>
+                <li>The application allows the user to sort the listed items based on price 
+                    (low to high) and review (high to low) to help users purchase cheaper items and/or highly rated items.</li>
+                <li>To enable the user to view specific items that suit their preferences, 
+                the application allows the user to filter items based on what the item's type is 
+                and whether it is a seasonal item sold only during a limited period of time.</li>
+                <li>All sections where the user can specify sorting and filter categories are highlighted with larger texts.</li> 
+                <li>If the user wants to revert the listed items to their original state, they can click the "Reset All Filters" button to do so.</li>
+                <li>To help users distinguish sections on the applications (e.g., sorting and filtering, cart, items listed), the website uses backgrounds with different colors.</li>
+            </ul>
+            <p class = "bolded">Aggregate and Remove</p>
+            <ul>
+                <li>The user can visualize items they added to the cart in the "Cart" section and keep track of the total cost of items they selected.</li> 
+                <li>The user can remove items from the cart by simply clicking the "Remove" button next to each item.</li>
+            </ul>
+            
+
+            <h3>Organization of Components</h3>
+            <p>I have two components, BakeryItem and CartItem.</p> 
+            <p class = "bolded">BakeryItem</p>
+            <div class = "image-container">
+                <img src = "../images/BakeryItem.png">
+            </div>
+            <p>BakeryItem, which is shown above, is an item that is listed on the website, 
+            and CartItem is an item that the user added to their cart. 
+            A BakeryItem has an image an item, along with information about the item 
+            and a button that allows the uer to add the item to their cart.</p> 
+            
+            <p class = "bolded">CartItem</p>
+            <div class = "image-container"> 
+                <img src = "../images/CartItem.png">
+            </div>
+            <p>A CartItem, which is shown as a part of the Cart section above, 
+            has the name and the price of the item added and a button that allows the user to 
+            remove the item from the cart.<br><br>
+
+            Each of those two components descrobed above takes properties of certain items initially derived from 
+            a json file and a function that needs to be executed when the user clicks a button in the component.</p>
+
+            <h3>How Data is Passed Down Through Components</h3>
+            <p>
+                Once the app is initialized, data representing properties of each item in bakery-data.json are used to create their corresponding BakeryItem components. 
+                A BakeryItem component takes these as props:</p>
+            <ol>
+                <li>Properties (item image, name, type, review, price, and boolean value indicating whether the item is a seasonal item) derived from bakery-data.json and used to populate item information accordingly.</li>
+                <li>An update function, which allows the user to add an item to the cart.</li>
+            </ol> 
+            <p>When the user adds an item to the cart, a CartItem component is created. A CartItem component takes these as props:</p>
+            <ol>
+                <li>Properties (item name and price) derived from bakery-data.json and used to populate item information accordingly.</li>
+                <li> An update function, which allows the user to remove an item from the cart.</li>
+            </ol>
+
+            <h3>How the User Triggers State Changes</h3>
+            <p>A "state" in React can be used to modify certain components in a website. 
+                The user can trigger state changes by clicking checkboxes to apply different filters or 
+                selecting different sorting categories in a dropdown menu for sorting. 
+                They can also reset the state of the two filters to their original states 
+                by clicking the "Reset All Filters" button.</p>
+
+            <h3>Finished website</h3>
+            <p>You can check out my finished website <a href = "https://happysifaka123.github.io/cs1300-development/">HERE</a>!</p>
+
+            <h3>Conclusion</h3>
+            <p>Through this project, I learned how to build a website using state variables and components in React 
+                and how to implement sort and filter functionalities. 
+                I found these particularly useful when making websites with interactive components that follow consistent 
+                structures such as this portfolio!  
+            </p>
+
+            <div class = "button-container">
+                <a href = "../index.html"><button>Back to Home</button></a>
+            </div>
+        </div>
+    </body>
+</html>
